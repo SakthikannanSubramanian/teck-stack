@@ -6,7 +6,7 @@ import HeaderComponent from "./components/Header";
 function App() {
   return (
     <div className="App">
-      <HeaderComponent homedata="Cognizant QE Technology Stack" />
+      <HeaderComponent homedata="QE Technology Stack" />
       <div className="Container">
         <Home />
       </div>

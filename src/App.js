@@ -1,16 +1,16 @@
-import './App.css';
-import Home from './containers/Home';
-import FooterComponent from './components/Footer';
-import HeaderComponent from './components/Header';
+import "./App.css";
+import Home from "./containers/Home";
+import FooterComponent from "./components/Footer";
+import HeaderComponent from "./components/Header";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <HeaderComponent homedata="Cognizant QE Technology Stack" />
-      <div className='Container'>
+      <div className="Container">
         <Home />
       </div>
-      <FooterComponent />
+      {/* <FooterComponent />  */}
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# POCs - Sai Vishnu (saivishnu.p@gmail.com) & Sakthikannan Subramanian (sakthikanna)
+# POCs - Sai Vishnu (saivishnu.p@gmail.com) & Sakthikannan Subramanian (sakthikannan.subramanian@gmail.com)
 
 ## Available Scripts
 

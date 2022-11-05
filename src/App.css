@@ -1,0 +1,123 @@
+.App {
+  background-image: linear-gradient(white, white);
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  position: fixed;
+  top: 0;
+  margin: auto;
+  background: #002147;
+  width: 100%;
+}
+
+.App-header p{
+  color: white;
+  font-family: "Sofia", sans-serif;
+  font-weight: bold;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Home-card {
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5%;
+  background-color: transparent;
+}
+
+.App-footer {
+  display: block;
+  background-color: transparent;
+  text-align: center;
+  height: auto;
+  padding: 8px;
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  width: 100%;
+}
+
+.Home-pyramid{
+  position: relative;
+  height: 100%;
+  clip-path: polygon(50% 0,20% 100%, 80% 100%);
+}
+
+.Home-pyramid div{
+  background: #002147;
+  width: 100%;
+  height: 100%;
+  color:white;
+  margin: 0 auto;
+  line-height: 100px;
+  text-align: center;
+  font-size: auto;
+}
+
+.Container{
+  width: 80%;
+  background:transparent;
+  margin: 0 auto; /* Center the DIV horizontally */
+  line-height: 100px;
+}
+
+.Home-pyramid-one{
+  animation: fadeIn 6s;
+}
+
+
+.Home-pyramid-two{
+  animation: fadeIn 6s;
+}
+
+
+.Home-pyramid-three{
+  animation: fadeIn 5s;
+}
+
+
+.Home-pyramid-four{
+  animation: fadeIn 4s;
+}
+
+.Home-pyramid-five{
+  animation: fadeIn 3s;
+}
+
+.Home-pyramid-six{
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0;background: #33DAFF;}
+  100% { opacity: 1; 
+    }
+}

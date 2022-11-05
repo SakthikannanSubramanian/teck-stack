@@ -1,0 +1,42 @@
+
+<Box sx={{ flexGrow: 1 }}>
+                        <Grid container spacing={1}>
+                            <Grid item xs={3}>
+                                <Button variant="outlined">Outlined</Button>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Button variant="outlined">Outlined</Button>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Button variant="outlined">Outlined</Button>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Button variant="outlined">Outlined</Button>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Button variant="outlined">Outlined</Button>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Button variant="outlined">Outlined</Button>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Button variant="outlined">Outlined</Button>
+                            </Grid>
+                            <Grid item xs={3}>
+                                <Button variant="outlined">Outlined</Button>
+                            </Grid>
+                        </Grid>
+                    </Box>
+
+
+                    <Stack spacing={4} direction="row">
+                        <Button variant="outlined">Outlined</Button>
+                        <Button variant="outlined">Outlined</Button>
+                        <Button variant="outlined">Outlined</Button>
+                    </Stack>
+                    <br></br>
+                    <Stack spacing={4} direction="row">
+                        <Button variant="outlined">Outlined</Button>
+                        <Button variant="outlined">Outlined</Button>
+                        <Button variant="outlined">Outlined</Button>
+                    </Stack>

@@ -1,26 +1,11 @@
-import React from 'react';
-import Fab from '@mui/material/Fab';
-import { Link } from 'react-router-dom';
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import { motion } from 'framer-motion';
-import '../App.css';
 
-const floatingHome = (props) =>{
-        return (
-                <motion.div className='FloatingHome' initial={{ y: '-100vw' }} animate={{ y: '0' }} transition={{ delay: 0.7 }}>
-                    <Fab color="info" aria-label="add">
-                        <Link to='/home'><HomeRoundedIcon /></Link>
-                    </Fab>
-                </motion.div>
-        )
-    }
 
-export default floatingHome;
- 
- 
- 
- 
- 
+   /* const immediateParent =  e.currentTarget.parentNode;
+        immediateParent.style.background = '#D8D8D8';
+        The above snippets would be used while impl highlighting the segement in line with current child panel data.
+        */
+
+        
  <div>
                     <Modal
                         open={this.state.openBackDrop}

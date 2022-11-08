@@ -2,7 +2,9 @@ import React from "react";
 import '.././App.css';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
+import $ from 'jquery';
+import ChildrenContainer from './ChildrenContainer';
 
 const style = {
     position: 'absolute',
@@ -21,50 +23,66 @@ class Home extends React.Component {
     constructor() {
         super();
         this.state = {
-            openBackDrop: false,
+            openChildPanelStatus:false,
+            style: {
+                width: '90%',
+                padding: '3%',
+                margin: 'auto',
+                bottom: '0',
+                borderRadius: '10px',
+                background: 'transparent',
+                transition: 'all .5s',
+                transform: ''
+            }
         }
     }
 
-    openChildPanel=(e)=>{
-       // e.currentTarget.parentNode.style.background = '#00FFFF'
+    openChildPanel() {
+        const scale = 0.4;
+        $('#homePyramidContainer').css({
+            transform: 'scale(' + scale + ')translateX(-75%) translateY(-70%)'
+        });
     }
-
 
     render() {
         return (
-            <motion.div className='Card' initial={{y:'100vw'}}animate={{y:'0'}} transition={{delay:0.7}} id='homePyramidContainer'>
-                <div className="Home-pyramid" >
-                    <div className="Home-pyramid-one">
-                        <NavLink  style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
-                        onClick={this.openChildPanel}>{this.props.initialStateObj.firstSegment}</NavLink>
+            <div>
+                <motion.div style={this.state.style} initial={{ y: '100vw' }} animate={{ y: '0' }} transition={{ delay: 0.7 }} id='homePyramidContainer'>
+                    <div className="Home-pyramid" >
+                        <div className="Home-pyramid-one">
+                            <NavLink style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
+                                onClick={this.openChildPanel}>{this.props.initialStateObj.firstSegment}</NavLink>
+                        </div>
+                        <br></br>
+                        <div className="Home-pyramid-two">
+                            <NavLink style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
+                                onClick={this.openChildPanel}>{this.props.initialStateObj.secondSegment}</NavLink>
+                        </div>
+                        <br></br>
+                        <div className="Home-pyramid-three">
+                            <NavLink style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
+                                onClick={this.openChildPanel}>{this.props.initialStateObj.thirdSegment}</NavLink>
+                        </div>
+                        <br></br>
+                        <div className="Home-pyramid-four">
+                            <NavLink style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
+                                onClick={this.openChildPanel}>{this.props.initialStateObj.fourthSegment}</NavLink>
+                        </div>
+                        <br></br>
+                        <div className="Home-pyramid-five">
+                            <NavLink style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
+                                onClick={this.openChildPanel}>{this.props.initialStateObj.fifthSegment}</NavLink>
+                        </div>
+                        <br></br>
+                        <div className="Home-pyramid-six">
+                            <NavLink to="/testing" style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
+                                onClick={this.openChildPanel}>{this.props.initialStateObj.sixthSegment}</NavLink>
+                        </div>
                     </div>
-                    <br></br>
-                    <div className="Home-pyramid-two">
-                        <NavLink style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
-                         onClick={this.openChildPanel}>{this.props.initialStateObj.secondSegment}</NavLink>
-                    </div>
-                    <br></br>
-                    <div className="Home-pyramid-three">
-                        <NavLink style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
-                         onClick={this.openChildPanel}>{this.props.initialStateObj.thirdSegment}</NavLink>
-                    </div>
-                    <br></br>
-                    <div className="Home-pyramid-four">
-                        <NavLink  style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
-                         onClick={this.openChildPanel}>{this.props.initialStateObj.fourthSegment}</NavLink>
-                    </div>
-                    <br></br>
-                    <div className="Home-pyramid-five">
-                        <NavLink style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
-                         onClick={this.openChildPanel}>{this.props.initialStateObj.fifthSegment}</NavLink>
-                    </div>
-                    <br></br>
-                    <div className="Home-pyramid-six">
-                        <NavLink to="/testing" style={{ fontFamily: "Times New Roman", fontSize: "150%", fontWeight: "bold", textDecoration: "none" }}
-                         onClick={this.openChildPanel}>{this.props.initialStateObj.sixthSegment}</NavLink>
-                    </div>
-                </div>
-            </motion.div >
+                </motion.div >
+                {this.state.openChildPanelStatus && <ChildrenContainer />}
+            </div>
+
         );
     }
 }

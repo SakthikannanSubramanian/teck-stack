@@ -9,6 +9,11 @@ import { Link } from 'react-router-dom';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import {motion} from 'framer-motion';
 function App() {
+
+  const reloadHome = () =>{
+    window.location.reload();
+  }
+
   return (
     <Router>
       <div className='App'>
@@ -21,9 +26,9 @@ function App() {
           </Routes>
         </div>
         <motion.div style={{ marginLeft: '1%', cursor: 'move' }} drag dragConstraints={{ top: '10px', bottom: '30px' }}
-         >
+        >
           <Fab color="info" aria-label="add">
-            <Link to='/home'><HomeRoundedIcon /></Link>
+            <Link to='/home' onClick={reloadHome}><HomeRoundedIcon/></Link>
           </Fab>
         </motion.div>
         <FooterComponent />

@@ -76,18 +76,6 @@
   width: 100%;
 }
 
-.Card {
-  width: 90%;
-  padding: 3%;
-  margin: auto;
-  bottom: 0;
-  border-radius: 10px;
-  background: transparent;
-  animation: shrinkDown;
-  animation-fill-mode: forwards;
- 
-}
-
 .Home-pyramid {
   position: relative;
   height: 100%;
@@ -103,17 +91,6 @@
   text-align: center;
   font-size: auto;
 }
-
-@keyframes shrinkDown {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(0.4) translateX(-75%) translateY(-70%);
-  }
-}
-
 
 .Home-pyramid-one {
   animation: fadeIn 6s;
